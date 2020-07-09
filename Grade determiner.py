@@ -57,7 +57,11 @@ Gpa Calculator is used to calculate your Gpa for a semester
 All you need to do is follow the prompts and u should be fine"""
     print(intro)
     print(" ")
-    cum_la_Score,names_courses,gpa_score=cum_la_gpa_score()
+    try:
+        cum_la_Score,names_courses,gpa_score=cum_la_gpa_score()
+    except:
+        ZeroDivisionError
+        cum_la_Score,names_courses,gpa_score=cum_la_gpa_score()
     print( "Courses you took this semester :\n",names_courses)
     print("Gpa Score for the Semester: " ,gpa_score)
 Information()  
